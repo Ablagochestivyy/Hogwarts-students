@@ -4,8 +4,8 @@ public class Kogtevran extends Hogwarts {
     private int witty;
     private int creativity;
 
-    public Kogtevran(int smart, int wise, int witty, int creativity,  int magicPower, int transgression) {
-        super( magicPower, transgression);
+    public Kogtevran(String name, String surname, int smart, int wise, int witty, int creativity,  int magicPower, int transgression) {
+        super(name, surname, magicPower, transgression);
         this.smart = smart;
         this.wise = wise;
         this.witty = witty;

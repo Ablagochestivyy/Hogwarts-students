@@ -5,8 +5,8 @@ public class Slizerin extends Hogwarts {
     private int resourcefulness;
     private int thirstForPower;
 
-    public Slizerin(int cunning, int determination, int ambition, int resourcefulness, int thirstForPower,  int magicPower, int transgression) {
-        super( magicPower, transgression);
+    public Slizerin(String name, String surname, int cunning, int determination, int ambition, int resourcefulness, int thirstForPower,  int magicPower, int transgression) {
+        super(name, surname, magicPower, transgression);
         this.cunning = cunning;
         this.determination = determination;
         this.ambition = ambition;
