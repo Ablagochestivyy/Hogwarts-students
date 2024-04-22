@@ -1,5 +1,5 @@
 public class Slizerin extends Hogwarts {
-    private int Cunning;
+    private int cunning;
     private int determination;
     private int ambition;
     private int resourcefulness;
@@ -7,7 +7,7 @@ public class Slizerin extends Hogwarts {
 
     public Slizerin(int cunning, int determination, int ambition, int resourcefulness, int thirstForPower,  int magicPower, int transgression) {
         super( magicPower, transgression);
-        Cunning = cunning;
+        this.cunning = cunning;
         this.determination = determination;
         this.ambition = ambition;
         this.resourcefulness = resourcefulness;
@@ -15,11 +15,11 @@ public class Slizerin extends Hogwarts {
     }
 
     public int getCunning() {
-        return Cunning;
+        return cunning;
     }
 
     public void setCunning(int cunning) {
-        Cunning = cunning;
+        cunning = cunning;
     }
 
     public int getDetermination() {
