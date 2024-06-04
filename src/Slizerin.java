@@ -5,13 +5,43 @@ public class Slizerin extends Hogwarts {
     private int resourcefulness;
     private int thirstForPower;
 
-    public Slizerin(String name, String surname, int cunning, int determination, int ambition, int resourcefulness, int thirstForPower,  int magicPower, int transgression) {
+    public Slizerin(String name,
+                    String surname,
+                    int cunning,
+                    int determination,
+                    int ambition,
+                    int resourcefulness,
+                    int thirstForPower,
+                    int magicPower,
+                    int transgression) {
         super(name, surname, magicPower, transgression);
         this.cunning = cunning;
         this.determination = determination;
         this.ambition = ambition;
         this.resourcefulness = resourcefulness;
         this.thirstForPower = thirstForPower;
+    }
+
+    @Override
+    public String toString() {
+        return "Slizerin " +
+                super.toString() +
+                ", cunning=" + cunning +
+                ", determination=" + determination +
+                ", ambition=" + ambition +
+                ", resourcefulness=" + resourcefulness +
+                ", thirstForPower=" + thirstForPower;
+    }
+
+    public  int sum(){
+        return getAmbition() + getCunning() + getDetermination() + getResourcefulness();
+    }
+    public void compare (Slizerin otherStudent){
+        int thisPower = sum();
+        int otherPower = otherStudent.sum();
+        if (thisPower > otherPower){
+            System.out.println(getName() + " " + getSurname() + " лучше Слизеринец, чем " + otherStudent.getName() + " " + otherStudent.getSurname());
+        } else {System.out.println(otherStudent.getName() + " " + otherStudent.getSurname() + " лучше Слизеринец, чем " + getName() + " " + getSurname() );}
     }
 
     public int getCunning() {

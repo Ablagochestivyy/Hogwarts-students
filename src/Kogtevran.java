@@ -4,13 +4,41 @@ public class Kogtevran extends Hogwarts {
     private int witty;
     private int creativity;
 
-    public Kogtevran(String name, String surname, int smart, int wise, int witty, int creativity,  int magicPower, int transgression) {
+    public Kogtevran(String name,
+                     String surname,
+                     int smart,
+                     int wise,
+                     int witty,
+                     int creativity,
+                     int magicPower,
+                     int transgression) {
         super(name, surname, magicPower, transgression);
         this.smart = smart;
         this.wise = wise;
         this.witty = witty;
         this.creativity = creativity;
     }
+
+    @Override
+    public String toString() {
+        return "Kogtevran " +
+                super.toString() +
+                ", smart=" + smart +
+                ", wise=" + wise +
+                ", witty=" + witty +
+                ", creativity=" + creativity;
+    }
+    public  int sum(){
+        return getCreativity() + getSmart() + getWise() + getWitty();
+    }
+    public void compare (Kogtevran otherStudent){
+        int thisPower = sum();
+        int otherPower = otherStudent.sum();
+        if (thisPower > otherPower){
+            System.out.println(getName() + " " + getSurname() + " лучше Когтевранец, чем " + otherStudent.getName() + " " + otherStudent.getSurname());
+        } else {System.out.println(otherStudent.getName() + " " + otherStudent.getSurname() + " лучше Когтевранец, чем " + getName() + " " + getSurname() );}
+    }
+
 
     public int getSmart() {
         return smart;

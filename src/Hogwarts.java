@@ -11,15 +11,26 @@ public class Hogwarts {
         this.transgression = transgression;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public String toString() {
+        return name + " " + surname +
+                ": magicPower=" + magicPower +
+                ", transgression=" + transgression;
     }
 
+    public void compare(Hogwarts otherStudent){
+        if (getMagicPower() > otherStudent.getMagicPower()){
+            System.out.println(getName() + " " + getSurname() + " лучше студент, чем " + otherStudent.getName() + " " + otherStudent.getSurname());
+        }else {
+            System.out.println(otherStudent.getName() + " " + otherStudent.getSurname() + " лучше студент, чем " + getName() + " " + getSurname());
+        }
+    }
+
+    public String getName() {return name;}
 
     public String getSurname() {
         return surname;
     }
-
 
     public int getMagicPower() {
         return magicPower;
